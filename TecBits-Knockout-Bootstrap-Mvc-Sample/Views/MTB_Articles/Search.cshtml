@@ -1,0 +1,37 @@
+﻿@using SmartFormat;
+@model IEnumerable<TecBits_Knockout_Bootstrap_Mvc_Sample.Models.ArticleSearchResult>
+
+@{
+	ViewBag.Title = "Search";
+}
+
+<div class="container-fluid ">
+	<div class="row">
+
+		<div class="col-md-10">
+			<h2>Search</h2>
+			<span class="">About 10 results</span>
+			@foreach (var item in Model)
+   {
+				<h3>
+					@Html.ActionLink(Smart.Format("{Title}", item), "Details", "MTB_Articles", new { id = item.Link }, new { });
+		  <ul class="list-inline">
+			  <li>en.wikipedia.org/wiki/Web_design‎</li>
+			  <li>
+				  @Html.ActionLink(Smart.Format("/{Link}", item), "Details", "MTB_Articles", new { id = item.Link }, new { });
+			  </li>
+			  <li>
+				  @Html.DisplayFor(modelItem => item.PageRank)
+			  </li>
+		  </ul>
+				</h3>
+				<p>
+					@Html.DisplayFor(modelItem => item.Excerpt);
+				</p>
+				<hr />
+   }
+		</div>
+	</div>
+</div>
+
+

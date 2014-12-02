@@ -26,6 +26,9 @@ namespace TecBits_Knockout_Bootstrap_Mvc_Sample
             bundles.Add(new ScriptBundle("~/bundles/toastr").Include(
                   "~/Scripts/toastr.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/require").Include(
+                    "~/Scripts/require.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                        "~/Scripts/bootstrap.js",
                        "~/Scripts/bootstrap.validate.js"));

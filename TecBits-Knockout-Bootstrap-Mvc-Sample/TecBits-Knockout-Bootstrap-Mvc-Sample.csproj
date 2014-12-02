@@ -275,9 +275,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\bootstrap.validate.js" />
+    <Content Include="Scripts\r.js" />
+    <Content Include="Scripts\require.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="Scripts\ViewModel\ArticlesVM.js" />
+    <Content Include="Scripts\init.js" />
     <Content Include="Views\MTB_Articles\Index.cshtml" />
     <Content Include="Views\MTB_Articles\Create.cshtml" />
     <Content Include="Views\MTB_Articles\Edit.cshtml" />

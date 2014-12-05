@@ -1,6 +1,11 @@
 ﻿/// ArticlesVM.js
 /// <reference path="../knockout-3.2.0.js" />
 
+
+$(document).ready(function () {
+    ko.applyBindings(IndexViewModel);
+});
+
 function IndexViewModel() {
     // data
     var self = this;
@@ -20,6 +25,9 @@ function IndexViewModel() {
             self.article(data);
         });
     };
+
+    self.getArticles();
+
 };
 
-ko.applyBindings(IndexViewModel);
+

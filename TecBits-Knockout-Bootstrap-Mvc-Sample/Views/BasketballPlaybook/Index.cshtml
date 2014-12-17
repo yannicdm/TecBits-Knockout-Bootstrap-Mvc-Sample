@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div>
+    <div>
+        <h2>Tags</h2>
+    </div>
+    <div>
+        <p>
+            <input type="text" data-bind="value: tagToAdd, valueUpdate: 'afterkeydown'" placeholder="Add New Tag" />
+            <button data-bind="click: addTag">+ Add</button>
+        </p>
+        <ul data-bind="foreach: tags">
+            <li data-bind="click: $parent.selectTag">
+                <div>
+                    <span data-bind="text: Name"></span>
+                    <a href="#" class="tag-edit">Edit</a>
+                    <a href="#" class="tag-delete">Delete</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="tagDialog" data-bind="with: selectedTag">
+        Tag name: <input type="text" data-bind="value: Name" />
+</div>
+@*<div id="tagDialog" >
+    Tag name:
+</div>*@
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/ViewModel/BasketballPlaybookViewModel.js");
+}
+
+
